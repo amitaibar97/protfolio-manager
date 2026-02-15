@@ -14,9 +14,8 @@ interface PageProps {
 }
 
 export default async function ProjectDetailPage({ params }: PageProps) {
-   const { id } = await params; 
+   const { id } = await params; //from next 15 dynamic params are async iterable, so we need to await it
   const project = await getProjectById(id);
-  console.log(params.id, project);
   
   if (!project) {
     notFound();
