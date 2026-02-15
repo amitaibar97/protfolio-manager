@@ -18,7 +18,6 @@ function DeleteButtonContent() {
 }
 
 export default function DeleteButton({ projectId }: { projectId: string }) {
-  // Create a wrapper function that doesn't return anything
   const deleteWithId = deleteProject.bind(null, projectId);
 
   return (
